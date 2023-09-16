@@ -30,7 +30,7 @@ public class Pizza {
             this.billPrice = 300;
             this.toppingsPrice = 70;
         }
-        else{
+        else{ //non veg price is 400
             this.billPrice = 400;
             this.toppingsPrice = 120;
         }
@@ -74,16 +74,16 @@ public class Pizza {
         // your code goes here
         if(!isBillGenerated){
             if(isCheeseAdded){
-                bill += "Extra Cheese Added: "+this.cheesePrice+"\n";
+                bill = bill + "Extra Cheese Added: "+this.cheesePrice+"\n";
             }
             if(isToppingsAdded){
-                bill += "Extra Toppings Added: "+this.toppingsPrice+"\n";
+                bill = bill + "Extra Toppings Added: "+this.toppingsPrice+"\n";
             }
             if(isPaperBagAdded){
-                bill += "Paperbag Added: "+this.paperBagPrice+"\n";
+                bill = bill + "Paperbag Added: "+this.paperBagPrice+"\n";
             }
 
-            bill += "Total Price: "+billPrice+"\n";
+            bill = bill + "Total Price: "+billPrice+"\n";
 
             isBillGenerated = true;
         }
