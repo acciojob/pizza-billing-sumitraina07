@@ -25,7 +25,6 @@ public class Pizza {
     public Pizza(Boolean isVeg){
         this.isVeg = isVeg;
         // your code goes here
-        //contructor k sath initialization hoga variables ka
         if(isVeg){ //veg price is 300
             this.billPrice = 300;
             this.toppingsPrice = 70;
@@ -38,7 +37,7 @@ public class Pizza {
         this.cheesePrice = 80;
         this.paperBagPrice = 20;
 
-        this.bill = "Base Price Of The Pizza: " +this.billPrice+"\n";
+        this.bill = "Base Price Of The Pizza = " +this.billPrice+"\n";
     }
 
     public int getBillPrice(){
@@ -74,91 +73,19 @@ public class Pizza {
         // your code goes here
         if(!isBillGenerated){
             if(isCheeseAdded){
-                bill = bill + "Extra Cheese Added: "+this.cheesePrice+"\n";
+                bill = bill + "Extra Cheese Added = "+this.cheesePrice+"\n";
             }
             if(isToppingsAdded){
-                bill = bill + "Extra Toppings Added: "+this.toppingsPrice+"\n";
+                bill = bill + "Extra Toppings Added = "+this.toppingsPrice+"\n";
             }
             if(isPaperBagAdded){
-                bill = bill + "Paperbag Added: "+this.paperBagPrice+"\n";
+                bill = bill + "Paperbag Added = "+this.paperBagPrice+"\n";
             }
 
-            bill = bill + "Total Price: "+billPrice+"\n";
+            bill = bill + "Total Price = "+billPrice+"\n";
 
             isBillGenerated = true;
         }
         return this.bill;
-    }
-
-    public void setBillPrice(int billPrice) {
-        this.billPrice = billPrice;
-    }
-
-    public Boolean getVeg() {
-        return isVeg;
-    }
-
-    public void setVeg(Boolean veg) {
-        isVeg = veg;
-    }
-
-    public void setBill(String bill) {
-        this.bill = bill;
-    }
-
-    public int getCheesePrice() {
-        return cheesePrice;
-    }
-
-    public void setCheesePrice(int cheesePrice) {
-        this.cheesePrice = cheesePrice;
-    }
-
-    public int getToppingsPrice() {
-        return toppingsPrice;
-    }
-
-    public void setToppingsPrice(int toppingsPrice) {
-        this.toppingsPrice = toppingsPrice;
-    }
-
-    public int getPaperBagPrice() {
-        return paperBagPrice;
-    }
-
-    public void setPaperBagPrice(int paperBagPrice) {
-        this.paperBagPrice = paperBagPrice;
-    }
-
-    public boolean isCheeseAdded() {
-        return isCheeseAdded;
-    }
-
-    public void setCheeseAdded(boolean cheeseAdded) {
-        isCheeseAdded = cheeseAdded;
-    }
-
-    public boolean isToppingsAdded() {
-        return isToppingsAdded;
-    }
-
-    public void setToppingsAdded(boolean toppingsAdded) {
-        isToppingsAdded = toppingsAdded;
-    }
-
-    public boolean isPaperBagAdded() {
-        return isPaperBagAdded;
-    }
-
-    public void setPaperBagAdded(boolean paperBagAdded) {
-        isPaperBagAdded = paperBagAdded;
-    }
-
-    public boolean isBillGenerated() {
-        return isBillGenerated;
-    }
-
-    public void setBillGenerated(boolean billGenerated) {
-        isBillGenerated = billGenerated;
     }
 }
