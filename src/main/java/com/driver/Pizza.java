@@ -2,7 +2,7 @@ package com.driver;
 
 public class Pizza {
 
-    private int billPrice; //Total price
+    private int price; //Total price
 
     private Boolean isVeg;
 
@@ -26,29 +26,29 @@ public class Pizza {
         this.isVeg = isVeg;
         // your code goes here
         if(isVeg){ //veg price is 300
-            this.billPrice = 300;
+            this.price = 300;
             this.toppingsPrice = 70;
         }
         else{ //non veg price is 400
-            this.billPrice = 400;
+            this.price = 400;
             this.toppingsPrice = 120;
         }
 
         this.cheesePrice = 80;
         this.paperBagPrice = 20;
 
-        this.bill = "Base Price Of The Pizza = " +this.billPrice+"\n";
+        this.bill = "Base Price Of The Pizza = " +this.price +"\n";
     }
 
-    public int getBillPrice(){
+    public int getPrice(){
 
-        return this.billPrice;
+        return this.price;
     }
 
     public void addExtraCheese(){ //we want to make sure that this method is called only once
         // your code goes here
         if(!isCheeseAdded){//it means it is never been called
-            billPrice += cheesePrice;
+            price += cheesePrice;
             isCheeseAdded = true;
         }
     }
@@ -56,7 +56,7 @@ public class Pizza {
     public void addExtraToppings(){
         // your code goes here
         if(!isToppingsAdded){
-            billPrice += toppingsPrice;
+            price += toppingsPrice;
             isToppingsAdded = true;
         }
     }
@@ -64,7 +64,7 @@ public class Pizza {
     public void addTakeaway(){
         // your code goes here
         if(!isPaperBagAdded){
-            billPrice += paperBagPrice;
+            price += paperBagPrice;
             isPaperBagAdded = true;
         }
     }
@@ -82,7 +82,7 @@ public class Pizza {
                 bill = bill + "Paperbag Added = "+this.paperBagPrice+"\n";
             }
 
-            bill = bill + "Total Price = "+billPrice+"\n";
+            bill = bill + "Total Price = "+ price +"\n";
 
             isBillGenerated = true;
         }
